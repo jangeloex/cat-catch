@@ -43,11 +43,11 @@ https://o2bmm.gitbook.io/cat-catch/
 ![m3u8解析器界面](https://raw.githubusercontent.com/xifangczy/cat-catch/master/README/m3u8.png)
 
 # 🤚🏻免责
-本扩展仅供下载用户拥有版权或已获授权的视频，禁止用于下载受版权保护且未经授权的内容。用户需自行承担使用本工具的全部法律责任，开发者不对用户的任何行为负责。本工具按“原样”提供，开发者不承担任何直接或间接责任。
+本扩展仅供下载用户拥有版权或已获授权的视频，禁止用于下载受版权保护且未经授权的内容。用户需自行承担使用本工具的全部法律责任，开发者不对用户的任何行为负责。本工具按"原样"提供，开发者不承担任何直接或间接责任。
 
 # 🚫版权保护与拒绝抓取声明
 我们尊重所有网站的内容版权和运营方的合法权益。
-如果您不允许本工具运行在您的网站上，请遵循以下流程向我们提交请求，我们将会把您的域名加入本项目的“避免抓取列表”中。
+如果您不允许本工具运行在您的网站上，请遵循以下流程向我们提交请求，我们将会把您的域名加入本项目的"避免抓取列表"中。
 - 在本仓库创建一个新的 Issue
 - Issue 标题请使用格式： `[Opt-Out Request] 您的网站域名`
 
@@ -78,3 +78,7 @@ GPL-3.0 license
 2.0版 更改为GPL v3许可
 
 为了资源嗅探扩展有良好发展，希望使用猫抓源码的扩展仍然保持开源。
+
+---
+
+> **个人备注 (Personal Notes):** This is my personal fork for learning purposes. I'm mainly studying how the m3u8 parser and resource filtering logic works. Not intended for redistribution.
