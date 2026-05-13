@@ -54,5 +54,6 @@
   },
   "content_security_policy": {
     "extension_pages": "script-src 'self'; object-src 'self'"
-  }
+  },
+  "_note": "personal fork - keeping options open in tab (already default) and using for local learning"
 }
