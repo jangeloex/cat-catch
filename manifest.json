@@ -1,81 +1,57 @@
 {
-  "background": {
-    "service_worker": "js/background.js"
+  "manifest_version": 3,
+  "name": "Cat Catch",
+  "version": "2.0.0",
+  "description": "Resource sniffer, find video and audio on the page",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
   },
   "action": {
-    "default_icon": "img/icon.png",
-    "default_title": "__MSG_catCatch__",
-    "default_popup": "popup.html"
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_popup": "popup/popup.html",
+    "default_title": "Cat Catch"
   },
-  "side_panel": {
-    "default_path": "popup.html"
+  "background": {
+    "service_worker": "background/background.js",
+    "type": "module"
   },
-  "description": "__MSG_description__",
-  "icons": {
-    "64": "img/icon.png",
-    "128": "img/icon128.png"
-  },
-  "manifest_version": 3,
-  "minimum_chrome_version": "93",
-  "name": "__MSG_catCatch__",
-  "homepage_url": "https://github.com/xifangczy/cat-catch",
-  "options_ui": {
-    "page": "options.html",
-    "open_in_tab": true
-  },
-  "permissions": [
-    "tabs",
-    "webRequest",
-    "downloads",
-    "storage",
-    "webNavigation",
-    "alarms",
-    "declarativeNetRequest",
-    "scripting",
-    "sidePanel"
-  ],
-  "commands": {
-    "_execute_action": {},
-    "enable": {
-      "description": "__MSG_pause__ / __MSG_enable__"
-    },
-    "auto_down": {
-      "description": "__MSG_autoDownload__"
-    },
-    "catch": {
-      "description": "__MSG_cacheCapture__"
-    },
-    "m3u8": {
-      "description": "__MSG_m3u8Parser__"
-    },
-    "clear": {
-      "description": "__MSG_clear__"
-    },
-    "reboot": {
-      "description": "__MSG_restartExtension__"
-    },
-    "deepSearch": {
-      "description": "__MSG_deepSearch__"
-    }
-  },
-  "host_permissions": [
-    "*://*/*",
-    "<all_urls>"
-  ],
   "content_scripts": [
     {
-      "matches": [
-        "https://*/*",
-        "http://*/*"
-      ],
-      "js": [
-        "js/content-script.js"
-      ],
-      "run_at": "document_start",
-      "all_frames": true
+      "matches": ["<all_urls>"],
+      "js": ["content/content.js"],
+      "run_at": "document_start"
     }
   ],
-  "default_locale": "en",
-  "version": "2.6.9",
-  "incognito": "split"
+  "permissions": [
+    "storage",
+    "tabs",
+    "webRequest",
+    "contextMenus",
+    "downloads",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "options_ui": {
+    "page": "options/options.html",
+    "open_in_tab": true
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }
