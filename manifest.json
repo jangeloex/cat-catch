@@ -36,7 +36,8 @@
     "webRequest",
     "contextMenus",
     "downloads",
-    "notifications"
+    "notifications",
+    "declarativeNetRequest"
   ],
   "host_permissions": [
     "<all_urls>"
