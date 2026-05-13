@@ -86,5 +86,6 @@ GPL-3.0 license
 > **学习进度 (Study Progress):**
 > - [x] Understand the basic resource sniffing flow via `webRequest` API
 > - [x] Read through the m3u8 parser and segment handling logic
-> - [ ] Figure out how the custom filter rules are applied
+> - [x] Figure out how the custom filter rules are applied (checked `filter.js` — rules are regex-matched against request URLs in the background listener)
 > - [ ] Trace how detected resources get passed from background to popup
+> - [ ] Look into how the download queue is managed for multi-segment m3u8 streams
