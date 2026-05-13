@@ -82,3 +82,9 @@ GPL-3.0 license
 ---
 
 > **个人备注 (Personal Notes):** This is my personal fork for learning purposes. I'm mainly studying how the m3u8 parser and resource filtering logic works. Not intended for redistribution.
+>
+> **学习进度 (Study Progress):**
+> - [x] Understand the basic resource sniffing flow via `webRequest` API
+> - [x] Read through the m3u8 parser and segment handling logic
+> - [ ] Figure out how the custom filter rules are applied
+> - [ ] Trace how detected resources get passed from background to popup
